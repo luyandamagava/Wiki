@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+{% block title %}
+    {{ query }}
+{% endblock %}
+
+{% block body %}
+
+    <h1>{{ query }}</h1>
+    <p>{{ text }}</p>
+    <a href="{% url 'editPage' query%}">Edit Page</a>
+    
+{% endblock %}

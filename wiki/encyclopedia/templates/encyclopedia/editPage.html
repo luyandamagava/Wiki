@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+{% block body %}
+
+<form action="{% url 'newEntry' %}">
+
+    <div  class="form-group">
+        <label for="EntryName">Entry Name</label>
+        <input class="form-control" name="EntryName" type="input" id="EntryName" value="{{ query }}"/>
+    </div>
+    <div class="form-group">
+        <label for="EntryInfo">Entry Info</label>
+        <textarea class="form-control" name="EntryInfo" rows="5" id="EntryInfo">{{ text }}</textarea>
+    </div>
+    <div  class="form-group">
+        <input type="submit" id="submitButton"/>
+    </div>
+</form>
+    
+{% endblock %}
